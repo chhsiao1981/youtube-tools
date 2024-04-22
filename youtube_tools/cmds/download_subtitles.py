@@ -39,7 +39,9 @@ def parse_args() -> argparse.ArgumentParser:
     parser.add_argument('-v', '--video_ids', type=str, required=True, help="list of video-id, comma separated")
     parser.add_argument('-o', '--out_dir', type=str, required=False, default='./subtitles', help="output-base-dir")
 
-    return parser
+    args = parser.parse_args()
+
+    return args
 
 
 def main():

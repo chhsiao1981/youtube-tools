@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 name = "youtube-tools"
 version = "0.0.1"
 dependencies = [
-    'youtube-transcript-api==0.6.2',
+    "youtube-transcript-api==0.6.2",
 ]
 authors = [
     {name = "Chuan-Heng Hsiao", email = "hsiao.chuanheng@gmail.com"},
@@ -31,6 +31,7 @@ classifiers = [
 # Changelog = ""
 
 [project.scripts]
+download-subtitles = "youtube_tools.cmds.download_subtitles:main"
 
 [tool.setuptools.packages.find]
 exclude = [

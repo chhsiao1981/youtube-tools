@@ -20,12 +20,12 @@ def download_subtitles(video_ids: list[str], root_dir: str) -> None:
                 'lang_code': transcript.language_code,
                 'generated': transcript.is_generated,
             }
-            out_filename = os.sep.join(out_dir, 'metadata.yaml')
+            out_filename = os.sep.join([out_dir, 'metadata.yaml'])
             with open(out_filename, 'w') as f:
                 yaml.dump(metadata, f)
 
             text = transcript.fetch()
-            out_filename = os.sep.join(out_dir, 'text.yaml')
+            out_filename = os.sep.join([out_dir, 'text.yaml'])
             with open(out_filename, 'w') as f:
                 yaml.dump(text, f)
 

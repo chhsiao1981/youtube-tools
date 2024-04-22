@@ -13,7 +13,7 @@ def download_subtitles(video_ids: list[str], root_dir: str) -> None:
             print(f'({idx}) video_id: {transcript.video_id} lang: {transcript.language} code: {transcript.language_code} generated: {transcript.is_generated} translatable: {transcript.is_translatable} translation_languages: {transcript.translation_languages}')
 
             out_dir = os.sep.join([root_dir, video_id, f'{idx:02d}-{transcript.language}'])
-            os.makedirs(out_dir)
+            os.makedirs(out_dir, exist_ok=True)
             metadata = {
                 'video_id': transcript.video_id,
                 'lang': transcript.language,

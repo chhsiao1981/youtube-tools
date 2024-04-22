@@ -8,9 +8,10 @@ build-backend = "setuptools.build_meta"
 name = "youtube-tools"
 version = "0.0.1"
 dependencies = [
+    'youtube-transcript-api==0.6.2',
 ]
 authors = [
-    #    {name = "", email = ""},
+    {name = "Chuan-Heng Hsiao", email = "hsiao.chuanheng@gmail.com"},
 ]
 description = ""
 readme = "README.md"

@@ -10,7 +10,7 @@ def download_subtitles(video_ids: list[str], root_dir: str) -> None:
     for video_id in video_ids:
         transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
         for idx, transcript in enumerate(transcript_list):
-            print(f'({idx}) video_id: {transcript.video_id} lang: {transcript.language} code: {transcript.language_code} generated: {transcript.is_generated} translatable: {transcript.is_translatable} translation_languages: {transcript.translation_languages}')
+            print(f'({idx}) video_id: {transcript.video_id} lang: {transcript.language} code: {transcript.language_code} generated: {transcript.is_generated}')
 
             out_dir = os.sep.join([root_dir, video_id, f'{idx:02d}-{transcript.language_code}'])
             os.makedirs(out_dir, exist_ok=True)
